@@ -1,0 +1,85 @@
+.welcome-display {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(338.5deg, #200427 57.55%, #631969 105.72%);
+  position: fixed;
+  overflow-wrap: break-word;
+  z-index: 2800;
+}
+
+.welcome-page-display img {
+  animation: my-animation 4S alternate infinite linear;
+}
+
+@keyframes my-animation {
+  from {
+    transform: skewY(-10deg);
+  }
+  to {
+    transform: skewX(10deg);
+  }
+}
+
+.welcome-page-display {
+  position: fixed;
+  width: 250px;
+  top: 20%;
+  left: 20%;
+  height: 250px;
+  background: linear-gradient(
+    163.36deg,
+    rgba(187, 75, 215, 0.1) 11.51%,
+    rgba(163, 161, 161, 0) 77.53%
+  );
+  border-radius: 50%;
+}
+.welcome-page-display img {
+  margin-top: 30px;
+}
+
+.welcome-display-footer {
+  margin-left: 20px;
+}
+.welcome-display-footer h1 {
+  color: #ffffff;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+.welcome-display-footer h3 {
+  color: #867878;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.welcome-display-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+}
+.welcome-display-footer button {
+  width: 40%;
+  font-weight: 700;
+  font-size: 12px;
+  background: #460656;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  padding: 8px;
+  text-decoration: none;
+}
+.welcome-display-footer button  a{
+  text-decoration: none;
+  color: #ffffff;
+}

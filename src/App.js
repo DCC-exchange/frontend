@@ -1,0 +1,80 @@
+import { Route, Routes } from "react-router-dom";
+import React from 'react';
+// import Features from "./pages/Features";
+import Home from "./pages/Home";
+import Market from "./pages/Market";
+import Spot from "./pages/Spot";
+import Wallet from "./pages/Wallet";
+import Menu from "./components/Menu";
+import Login from "./pages/Login";
+import ResetPassword from "./pages/ResetPassword";
+import Signup from "./pages/Signup";
+import Welcome from "./pages/Welcome";
+import ForgotPassword from "./pages/ForgotPassword";
+import Otp from "./components/Otp";
+// import MarketSpot from "./pages/MarketSpot";
+import Cookies from "./components/Cookies";
+import Error from "./components/Error";
+import dccLogo from "./images/dccLogo.svg";
+import { useState, useEffect } from "react";
+import { CookiesProvider } from "react-cookie";
+import { AuthContextProvider } from "./context/AuthContext";
+
+
+
+
+
+
+function App() {
+
+
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+
+
+
+  return (
+<CookiesProvider>
+<AuthContextProvider>
+    <div className="App">
+         {loading && (
+          <div className="mobile-preloader">
+            <div className="mobile-loader">
+              <img src={dccLogo} alt="Profile logo" />
+            </div>
+          </div>
+        )}
+        <Cookies />
+      <Routes>
+        <Route path="/" element={<Welcome />}></Route>
+        <Route path="/index" element={<Home />}></Route>
+        <Route path="Otp" element={<Otp />}></Route>
+        <Route path="*" element={<Error />}></Route>
+        <Route path="market" element={<Market />}></Route>
+        <Route path="spot" element={<Spot />}></Route>
+        {/* <Route path="features" element={<Features />}></Route> */}
+        <Route path="wallet" element={<Wallet />}></Route>
+        <Route path="menu" element={<Menu />}></Route>
+        <Route path="signup" element={<Signup />}></Route>
+        <Route path="login" element={<Login />}></Route>
+        <Route path="resetPassword" element={<ResetPassword/>}></Route>
+        <Route path="market" element={<Market />}></Route>
+        <Route path="forgotPassword" element={<ForgotPassword />}></Route>
+        {/* <Route path="features" element={<Features />}></Route> */}
+        <Route path="wallet" element={<Wallet />}></Route>
+        <Route path="spot" element={<Spot />} />
+      </Routes>
+    </div>
+  </AuthContextProvider>
+  </CookiesProvider>
+    
+  );
+}
+
+export default App;

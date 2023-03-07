@@ -1,0 +1,35 @@
+#cookies-header {
+    background: #731a8a;
+    box-shadow: 1px;
+    color: #eceae5;
+    position: fixed;
+    left: 146px;
+    bottom: 0;
+    border-radius: 12px;
+    width: 75%;
+    height: 170px;
+    text-align: center;
+    z-index: 2;
+    animation-duration: 5s;
+}
+.cookies-p{
+    margin-left: 70px;
+    margin-right: 40px;
+}
+#cookies-header h3 {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+#cookies-button {
+    width: 200px;
+    margin: 1rem;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #007aff;
+    color: white;
+}
+   .cookies-button:hover{
+    background-color: rgb(124, 128, 0);
+   }
