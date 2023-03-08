@@ -19,7 +19,6 @@ import dccLogo from "./images/dccLogo.svg";
 import { useState, useEffect } from "react";
 import { CookiesProvider } from "react-cookie";
 import { AuthContextProvider } from "./context/AuthContext";
-import HomeRoute from "./components/HomeRoute";
 import Hot from "./pages/Hot";
 import Favourite from "./pages/Favourite";
 import Gainers from "./pages/Gainers";
