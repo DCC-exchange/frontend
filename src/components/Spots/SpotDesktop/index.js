@@ -293,10 +293,8 @@ export default function SpotTrade() {
                                                         </TableBody>
                                                     </Table>
                                                 </TableContainer>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 )}
                                 {activeTab === 2 && (
