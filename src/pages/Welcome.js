@@ -3,10 +3,11 @@ import "./style/welcome.css";
 import dccLogo from "../images/dccLogo.svg";
 import wallet from "../images/wallet purse.svg";
 import { useAuthContext } from "../hooks/useAuthContext";
-import { Navigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 
 export default function Welcome() {
 const [loading, setLoading] = useState(false)
+const navigate = useNavigate()
 const {user} = useAuthContext()
 
 // redirects to home if user is already signed in
@@ -46,7 +47,7 @@ if(loading) {
             setLoading(true)
             setTimeout(function() {
               setLoading(false)
-              window.location.href='/index'
+              navigate('index')
             }, 5000)
           }}
           >Get Started</button>        

@@ -5,7 +5,7 @@
 .bottom-nav {
     bottom: 0px;
     position: fixed;
-    z-index: 200;
+    z-index: 2;
     left: 50%;
     width: 80%;
     padding: 10px 20px;
