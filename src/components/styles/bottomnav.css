@@ -1,0 +1,38 @@
+.bottom-nav-wrapper {
+    width: 100%;
+    background-color: #200427;
+}
+.bottom-nav {
+    bottom: 0px;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    width: 80%;
+    padding: 10px 20px;
+    transform: translateX(-50%);
+}
+
+.bottom-nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.bottom-nav-spot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.bottom-nav-spot svg {
+    width: 40px;
+    height: 40px;
+}
+.bottom-nav-link-active.bottom-nav-spot svg g ellipse {
+    fill: #C848E9;
+}
+.bottom-nav-link-active svg path{
+    fill: #C848E9;
+}

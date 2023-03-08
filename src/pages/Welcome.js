@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/welcome.css";
-import { NavLink } from "react-router-dom";
+import dccLogo from "../images/dccLogo.svg";
 import wallet from "../images/wallet purse.svg";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { Navigate, useNavigate } from "react-router";
 
 export default function Welcome() {
+const [loading, setLoading] = useState(false)
+const navigate = useNavigate()
+const {user} = useAuthContext()
 
+// redirects to home if user is already signed in
+if(user) {
+  return <Navigate replace to='/index'/>
+}
+// displays preloader once the get started button is clicked
+if(loading) {
+  return (
+    <div className="mobile-preloader">
+        <div className="mobile-loader">
+          <img src={dccLogo} alt="Profile logo" />
+        </div>
+    </div>
+  )
+}
   return (
     <div className="welcome-display">
       <div className="welcome-page-display">
@@ -23,9 +42,15 @@ export default function Welcome() {
             With our app it’s easy and <br /> secured.
           </h3>
         </div>
-        <NavLink to="/index">
-          <button>Get Started</button>
-        </NavLink>
+          <button
+          onClick={() => {
+            setLoading(true)
+            setTimeout(function() {
+              setLoading(false)
+              navigate('index')
+            }, 5000)
+          }}
+          >Get Started</button>        
       </div>
     </div>
   );

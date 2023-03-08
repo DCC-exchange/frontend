@@ -23,10 +23,12 @@ import "swiper/swiper.min.css";
 
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Autoplay } from "swiper";
+import HomeRoute from "../components/HomeRoute";
 
 SwiperCore.use([Autoplay]);
 
 export default function Home() {
+
   return (
     <div className="homePage">
       <div className="home-top-flex">
@@ -180,29 +182,15 @@ export default function Home() {
           </div>
 
           {/* Home Routes */}
-
-          <div className="home-main-trade-display">
-            <div className="home-main-trade-text">
-              <NavLink to="favourite">Favourite</NavLink>
-            </div>
-            <div className="home-main-trade-text">
-              <NavLink to="hot">Hot</NavLink>
-            </div>
-            <div className="home-main-trade-text">
-              <NavLink to="login">Gainers</NavLink>
-            </div>
-            <div className="home-main-trade-text">
-              <NavLink to="login">Losers</NavLink>
-            </div>
-            <div className="home-main-trade-text">
-              <NavLink to="login">Volume</NavLink>
-            </div>
+          <div className="home-main-trade-wrapper">
+          <HomeRoute />
+          <Outlet/>
           </div>
           <div className="token-container">
             <div className="token-contents"></div>
           </div>
         </div>
-        <Outlet />
+        
       </div>
     </div>
   );
