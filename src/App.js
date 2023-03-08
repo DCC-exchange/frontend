@@ -19,6 +19,10 @@ import dccLogo from "./images/dccLogo.svg";
 import { useState, useEffect } from "react";
 import { CookiesProvider } from "react-cookie";
 import { AuthContextProvider } from "./context/AuthContext";
+import HomeRoute from "./components/HomeRoute";
+import Hot from "./pages/Hot";
+import Favourite from "./pages/Favourite";
+import Gainers from "./pages/Gainers";
 
 
 
@@ -33,7 +37,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 2500);
   }, []);
 
 
@@ -53,7 +57,11 @@ function App() {
         <Cookies />
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
-        <Route path="/index" element={<Home />}></Route>
+        <Route path="/index" element={<Home />}>
+          <Route index path="hot" element={<Hot />}/>
+          <Route path="favourite" element={<Favourite />}/>
+          <Route path="hot" element={<Gainers />}/>
+        </Route>
         <Route path="Otp" element={<Otp />}></Route>
         <Route path="*" element={<Error />}></Route>
         <Route path="market" element={<Market />}></Route>
@@ -69,6 +77,8 @@ function App() {
         {/* <Route path="features" element={<Features />}></Route> */}
         <Route path="wallet" element={<Wallet />}></Route>
         <Route path="spot" element={<Spot />} />
+        
+
       </Routes>
     </div>
   </AuthContextProvider>
