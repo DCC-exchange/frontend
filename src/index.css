@@ -24,7 +24,9 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-
+.App {
+  position: relative;;
+}
 .mobile-preloader {
   position: fixed;
   top: 0;

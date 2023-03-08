@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 export default function HomeRoute() {
     return ( 
-    <div className="home-main-trade-wrapper">
     <div className="home-main-trade-display">
     <div className="home-main-trade-text">
       <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="favourite">Favourite</NavLink>
@@ -21,8 +20,6 @@ export default function HomeRoute() {
     <div className="home-main-trade-text">
       <NavLink to="/login">Volume</NavLink>
     </div>
-  </div>
-    <Outlet />
   </div>
     ) 
 }
