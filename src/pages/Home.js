@@ -23,13 +23,11 @@ import "swiper/swiper.min.css";
 
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Autoplay } from "swiper";
-import { useAuthContext } from "../hooks/useAuthContext";
 import HomeRoute from "../components/HomeRoute";
 
 SwiperCore.use([Autoplay]);
 
 export default function Home() {
-  const {user} = useAuthContext()
 
   return (
     <div className="homePage">
