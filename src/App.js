@@ -19,6 +19,12 @@ import dccLogo from "./images/dccLogo.svg";
 import { useState, useEffect } from "react";
 import { CookiesProvider } from "react-cookie";
 import { AuthContextProvider } from "./context/AuthContext";
+import HomeRoute from "./components/HomeRoute";
+import Hot from "./pages/Hot";
+import Favourite from "./pages/Favourite";
+import Gainers from "./pages/Gainers";
+import BottomNav from "./components/BottomNav";
+import MarketSpot from "./pages/MarketSpot";
 
 
 
@@ -33,7 +39,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 2500);
   }, []);
 
 
@@ -53,22 +59,36 @@ function App() {
         <Cookies />
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
-        <Route path="/index" element={<Home />}></Route>
-        <Route path="Otp" element={<Otp />}></Route>
-        <Route path="*" element={<Error />}></Route>
+        {/* routes with the bottom navigation goes in here */}
+        <Route element={<BottomNav />}>
+        <Route path="index/" element={<Home />}>
+          <Route index element={<Hot />}/>
+          <Route path="favourite" element={<Favourite />}/>
+          <Route path="gainers" element={<Gainers />}/>
+          <Route path="hot" element={<Hot />}/>
+        </Route>
         <Route path="market" element={<Market />}></Route>
         <Route path="spot" element={<Spot />}></Route>
+        <Route path="marketspot" element={<MarketSpot />}></Route>
+        <Route path="wallet" element={<Wallet />}></Route>
+        </Route>
+        {/* routes with the bottom navigation goes in here */}
+        <Route path="Otp" element={<Otp />}></Route>
+        <Route path="*" element={<Error />}></Route>
+        
         {/* <Route path="features" element={<Features />}></Route> */}
         <Route path="wallet" element={<Wallet />}></Route>
         <Route path="menu" element={<Menu />}></Route>
         <Route path="signup" element={<Signup />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="resetPassword" element={<ResetPassword/>}></Route>
-        <Route path="market" element={<Market />}></Route>
+
         <Route path="forgotPassword" element={<ForgotPassword />}></Route>
         {/* <Route path="features" element={<Features />}></Route> */}
         <Route path="wallet" element={<Wallet />}></Route>
         <Route path="spot" element={<Spot />} />
+        
+
       </Routes>
     </div>
   </AuthContextProvider>
