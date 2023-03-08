@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./style/home.css";
@@ -184,8 +184,10 @@ export default function Home() {
           </div>
 
           {/* Home Routes */}
+          <div className="home-main-trade-wrapper">
           <HomeRoute />
-          
+          <Outlet/>
+          </div>
           <div className="token-container">
             <div className="token-contents"></div>
           </div>
