@@ -255,10 +255,15 @@ a{
   top: 50%;
 }
 
+.home-main-trade-wrapper{
+  margin:  50px auto;
+  width: 90%;
+}
 .home-main-trade-display {
   overflow-x: scroll;
   margin-top: 14px;
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
