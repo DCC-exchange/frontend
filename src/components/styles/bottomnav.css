@@ -5,7 +5,7 @@
     padding: 10px 20px;
 }
 .bottom-nav {
-    bottom: -20px;
+    bottom: -2px;
     background-color: #200427;
     position: fixed;
     z-index: 2;

@@ -9,9 +9,11 @@ export default function Welcome() {
 const [loading, setLoading] = useState(false)
 const navigate = useNavigate()
 const {user} = useAuthContext()
+const data = window.localStorage.getItem('MY_APP_STATE');
+
 
 // redirects to home if user is already signed in
-if(user) {
+if(user || data === 'false') {
   return <Navigate replace to='/index'/>
 }
 // displays preloader once the get started button is clicked
