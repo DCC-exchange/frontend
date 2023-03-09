@@ -15,7 +15,7 @@
     }
     .round_icon_spot {
         position: absolute;
-        left: 75px;
+        left: 50px;
         top: 0px;
     }
     .search_header_spot{
@@ -27,7 +27,7 @@
     }
     .search_header_spot input{
     background-color: #5B2963;
-    width: 257px;
+    width: 267px;
      padding: 10px;
     border: none;
     outline: none;
