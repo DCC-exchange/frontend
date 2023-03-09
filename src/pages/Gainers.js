@@ -51,8 +51,8 @@ for(let i = 0; i < Coins.length; i++){
                             <p>${coin.current_price} </p>
                      </div>
                      <div className="coin-name">
-                        {coin.price_change_percentage_24h >= 0 &&  <button className='positive'>+{coin.price_change_percentage_24h.toFixed(2)}% </button>}
-                        {coin.price_change_percentage_24h <  0 &&  <button className='negative'> {coin.price_change_percentage_24h.toFixed(2)}% </button>}
+                        {coin.price_change_percentage_24h !== null && coin.price_change_percentage_24h >= 0 &&  <button className='positive'>+{coin.price_change_percentage_24h.toFixed(2)}% </button>}
+                        {coin.price_change_percentage_24h !== null && coin.price_change_percentage_24h <  0 &&  <button className='negative'> {coin.price_change_percentage_24h.toFixed(2)}% </button>}
                     </div>
                 </div>
             ))}

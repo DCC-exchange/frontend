@@ -4,12 +4,12 @@
     color: #eceae5;
     position: fixed;
     left: 146px;
-    bottom: 0;
+    bottom: 20px;
     border-radius: 12px;
     width: 75%;
     height: 170px;
     text-align: center;
-    z-index: 3;;
+    z-index: 3;
     animation-duration: 5s;
 }
 .cookies-p{
@@ -33,3 +33,18 @@
    .cookies-button:hover{
     background-color: rgb(124, 128, 0);
    }
+
+
+   @media only screen and (max-width: 750px) {
+    #cookies-header {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92%;
+        height: max-content;
+    }   
+
+    .cookies-p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
