@@ -27,7 +27,7 @@
     }
     .search_header_spot input{
     background-color: #5B2963;
-    width: 257px;
+    width: 267px;
      padding: 10px;
     border: none;
     outline: none;
@@ -102,7 +102,7 @@
     .round_icon_1_spot{
         position: absolute;
         bottom: 0;
-        right: 50px;
+        right: 70px;
     }
     .last_price_2_spot h3{
         color: #00941D;

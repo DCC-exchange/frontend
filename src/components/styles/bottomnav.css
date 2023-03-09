@@ -1,5 +1,6 @@
 .bottom-nav-wrapper {
     width: 100%;
+    overflow-x: hidden;
 }
 .bottom-nav div {
     padding: 8px 20px;
