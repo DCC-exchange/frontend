@@ -6,6 +6,7 @@
 }
 .bottom-nav {
     bottom: -2px;
+    overflow-x: hidden;
     background-color: #200427;
     position: fixed;
     z-index: 2;
