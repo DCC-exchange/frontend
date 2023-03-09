@@ -28,9 +28,12 @@
     font-weight: 600;
 }
 
+.bottom-nav-spot p {
+    font-size: 12px;
+}
 .bottom-nav-spot svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 .bottom-nav-link-active.bottom-nav-spot svg g ellipse {
     fill: #C848E9;
@@ -39,8 +42,11 @@
     fill: #C848E9;
 }
 
+
+
 @media only screen and (min-width: 750px) {
     .bottom-nav-wrapper {
         display: none;
     }
+
 }
