@@ -1,14 +1,16 @@
 .bottom-nav-wrapper {
     width: 100%;
-    background-color: #200427;
+}
+.bottom-nav div {
+    padding: 10px 20px;
 }
 .bottom-nav {
-    bottom: 0px;
+    bottom: -20px;
+    background-color: #200427;
     position: fixed;
     z-index: 2;
     left: 50%;
-    width: 80%;
-    padding: 10px 20px;
+    width: 100%;
     transform: translateX(-50%);
 }
 
@@ -35,4 +37,10 @@
 }
 .bottom-nav-link-active svg path{
     fill: #C848E9;
+}
+
+@media only screen and (min-width: 750px) {
+    .bottom-nav-wrapper {
+        display: none;
+    }
 }
