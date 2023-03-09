@@ -2,10 +2,10 @@
     width: 100%;
 }
 .bottom-nav div {
-    padding: 10px 20px;
+    padding: 8px 20px;
 }
 .bottom-nav {
-    bottom: -2px;
+    bottom: 0px;
     overflow-x: hidden;
     background-color: #200427;
     position: fixed;
