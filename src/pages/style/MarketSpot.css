@@ -15,7 +15,7 @@
     }
     .round_icon_spot {
         position: absolute;
-        left: 75px;
+        left: 50px;
         top: 0px;
     }
     .search_header_spot{
@@ -102,7 +102,7 @@
     .round_icon_1_spot{
         position: absolute;
         bottom: 0;
-        right: 70px;
+        right: 50px;
     }
     .last_price_2_spot h3{
         color: #00941D;
