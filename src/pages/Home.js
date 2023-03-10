@@ -16,8 +16,6 @@ import trade from "../images/trade exchange.svg";
 import laptop from "../images/laptop dcc.svg";
 import bitcoin from "../images/bitcoin dcc.svg";
 import annouceIcon from "../images/announce.svg";
-import paypal from "../images/paypal.svg";
-import debit from "../images/debit.svg";
 
 import "swiper/swiper.min.css";
 
@@ -146,41 +144,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="home-main-lists-second-flex">
-            <NavLink to="/login">
-              <div className="home-main-lists-second-flex1">
-                <div className="text-content">
-                  <h1>P2P Trading</h1>
-                  <div className="home-main-lists-second-trade-flex">
-                    <h3>
-                      Bank Transfer, <br />
-                      <span>PayPal, Revoult and trade</span>
-                    </h3>
-                  </div>
-                </div>
-                <div className="image-content">
-                  <img src={paypal} alt="paypal logo" />
-                </div>
-              </div>
-            </NavLink>
-
-            <NavLink to="/login">
-              <div className="home-main-lists-second-flex1">
-                <div className="text-content">
-                  <h1>Credit/Debit Card</h1>
-                  <div className="home-main-lists-second-trade-flex">
-                    <h3>
-                      Visa, <br /> Mastercard
-                    </h3>
-                  </div>
-                </div>
-                <div className="image-content">
-                  <img src={debit} alt="debit logo" />
-                </div>
-              </div>
-            </NavLink>
-          </div>
-
+    
           {/* Home Routes */}
           <div className="home-main-trade-wrapper">
             <HomeRoute />
