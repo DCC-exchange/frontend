@@ -24,7 +24,7 @@ export default function Cookies() {
             <p className="cookies-p">We use cookies and similar technology to personalize contents, 
             tailor and measure ads, and provide a better experience. By clicking accept you 
             accept to this, as a outline to our cookie policy.</p>
-           <button id="cookies-button" onClick={() => setShowBanner(false)}>Set Cookie</button>
+           <button id="cookies-button" onClick={() => setShowBanner(false)}>Accept</button>
          </div>)}
     </>
   );
