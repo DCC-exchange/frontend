@@ -19,7 +19,6 @@ import dccLogo from "./images/dccLogo.svg";
 import { useState, useEffect } from "react";
 import { CookiesProvider } from "react-cookie";
 import { AuthContextProvider } from "./context/AuthContext";
-import HomeRoute from "./components/HomeRoute";
 import Hot from "./pages/Hot";
 import Favourite from "./pages/Favourite";
 import Gainers from "./pages/Gainers";
@@ -61,11 +60,11 @@ function App() {
         <Route path="/" element={<Welcome />}></Route>
         {/* routes with the bottom navigation goes in here */}
         <Route element={<BottomNav />}>
-        <Route path="index/" element={<Home />}>
+        <Route path="index" element={<Home />}>
           <Route index element={<Hot />}/>
           <Route path="favourite" element={<Favourite />}/>
           <Route path="gainers" element={<Gainers />}/>
-          <Route path="hot" element={<Hot />}/>
+          <Route  path="hot" element={<Hot />}/>
         </Route>
         <Route path="market" element={<Market />}></Route>
         <Route path="spot" element={<Spot />}></Route>

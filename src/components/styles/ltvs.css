@@ -1,0 +1,454 @@
+.spot-main-sport-trade {
+    margin: 10px 10px;
+    max-width: 100%;
+}
+
+.spot-trade-display-main-top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 7.5rem;
+}
+
+@media (max-width: 950px) {
+    .spot-trade-display-main-top-flex {
+        margin: 2px 2px;
+    }
+}
+
+.spot-trade-display-main-top-flex1 {
+    display: flex;
+    align-items: center;
+    /* column-gap: 2px; */
+}
+
+.spot-trade-display-main-top-flex1 h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.spot-trade-display-main-top-flex1 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600px;
+    color: #00c76f;
+    font-size: 14px;
+}
+
+.spot-trade-display-main-top-flex2 {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+
+.spot-tade-display-main-body-flex {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    max-width: 100%;
+}
+
+.spot-trade-content-heaeder-flext-2-A {
+    display: flex;
+    gap: 70px;
+}
+
+.spot-trade-display-amount {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.spot-trade-display-amount h3 {
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #10BD36CC;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-trade-display-amount h4 {
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #999999;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-trade-content-heaeder-flext-2-A h3 {
+    width: 55px;
+    height: 16px;
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: rgba(182, 182, 182, 0.77);
+}
+
+.spot-trade-content-body-flext-2-A {
+    display: flex;
+    gap: 70px;
+}
+
+.spot-trade-content-body-flext-2-A span {
+    color: #FF0A0ACC;
+    width: 58.14px;
+    height: 15.6px;
+    /* left: 271.14px;
+    top: 171.37px; */
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-trade-content-body-flext-2-b {
+    display: flex;
+    gap: 70px;
+}
+
+.spot-trade-content-body-flext-2-b span {
+    color: #00941D;
+    width: 58.14px;
+    height: 15.6px;
+    /* left: 271.14px;
+    top: 171.37px; */
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-tab-button {
+    width: 104px;
+    height: 32px;
+    left: 28px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    background: none;
+    border: none;
+    color: rgba(182, 182, 182, 0.77);
+}
+
+.spot-trade-display-main-body-flex1 {
+    width: 1000px;
+    max-width: 100%;
+}
+
+.spot-tab-button.active {
+    width: 92px;
+    height: 35px;
+    color: #FFF;
+    top: 72px;
+    background: linear-gradient(270deg, #8D0BA4 0%, #C66AD6 60.33%, #533E57 120.65%);
+    border-radius: 4px;
+}
+
+.spot-tab-buy {
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.spot-tab-buy h4,
+p {
+    color: #725F7D;
+    width: 85px;
+    /* height: 20px; */
+    /* font-family: 'IBM Plex Sans Thai Looped'; */
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 10px; */
+}
+
+.sport-tab-buy h4 {
+    width: 85px;
+    height: 20px;
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    color: #725F7D;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-tab-buy-input1 {
+    position: relative;
+}
+
+.spot-tab-buy-input1 .spot-tab-position-1 {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.spot-tab-buy-input1 .spot-tab-position-2 {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.spot-tab-buy-input1 input {
+    width: 100%;
+    border: none;
+    height: 29px;
+    /* left: 10px;
+    top: 267px; */
+    background: #725F7D;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.spot-tab-buy-input1 button {
+    border: none;
+    background: none;
+    color: #F9F6FA;
+}
+
+.spot-tab-buy-input1 input::-webkit-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input1 input::-moz-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input1 input:-ms-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input1 input::-ms-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input1 input::placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input1 input[type="number"] {
+    text-align: center;
+    color: #FFF;
+}
+
+.spot-tab-buy-input2 {
+    position: relative;
+}
+
+.spot-tab-buy-input2 .spot-tab-position-1 {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.spot-tab-buy-input2 .spot-tab-position-2 {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.spot-tab-buy-input2 input {
+    width: 100%;
+    border: none;
+    height: 29px;
+    /* left: 10px;
+    top: 267px; */
+    background: #725F7D;
+    border-radius: 3px;
+    outline: none;
+}
+
+.spot-tab-buy-input2 input[type="number"] {
+    text-align: center;
+    color: #FFF;
+}
+
+.spot-tab-buy-input2 input::-webkit-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input2 input::-moz-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input2 input:-ms-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input2 input::-ms-input-placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input2 input::placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+.spot-tab-buy-input2 button {
+    border: none;
+    background: none;
+    color: #F9F6FA;
+}
+
+.spot-trade-buy-sell {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.spot-trade-select {
+    width: 100%;
+    margin-top: 2rem;
+    height: 29px;
+    background: #725F7D;
+    border-radius: 3px;
+    outline: none;
+    color: #FFF;
+}
+
+.spot-trade-select option {
+    text-align: center;
+    color: #ffffff;
+}
+
+.sport-trade-buy-ens {
+    width: 100%;
+    height: 29px;
+    background: rgba(16, 189, 54, 0.8);
+    border-radius: 3px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFF;
+}
+
+.sport-trade-sell-ens {
+    width: 100%;
+    height: 29px;
+    background: #EB1A1A;
+    border-radius: 3px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFF;
+}
+
+
+/* vertical div */
+
+.vertical-div {
+    border-left: 2px solid #CCCDD2;
+    height: 17px;
+    float: left;
+}
+
+.spot-tab-sell {
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.spot-tab-sell h4,
+p {
+    color: #725F7D;
+    width: 85px;
+    /* height: 20px; */
+    /* font-family: 'IBM Plex Sans Thai Looped'; */
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 10px; */
+}
+
+.sport-tab-sell h4 {
+    width: 85px;
+    height: 20px;
+    left: 16px;
+    top: 191px;
+    font-family: 'IBM Plex Sans Thai Looped';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    color: #725F7D;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.spot-bottom-line-flex {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.spot-bottom-horizontal-line {
+    margin-top: 2px;
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    top: 523px;
+    border: 1px solid #71737A;
+}
+
+.spot-trade-content-body-bottom {
+    margin-top: 5px;
+    display: flex;
+    gap: 85px;
+}
+
+.futures-display-main-page-data {
+    margin: 20% 50%;
+}
+
+.spot-trade-content-body-bottom button {
+    width: 86px;
+    height: 18px;
+    left: 272px;
+    top: 428px;
+    background: #725F7D;
+    border-radius: 3px;
+    border: none;
+    color: white;
+}
