@@ -256,8 +256,9 @@ a{
 }
 
 .home-main-trade-wrapper{
-  margin:  50px auto;
+  margin:  20px auto;
   width: 100%;
+  padding: -15px;
 }
 .home-main-trade-display {
   overflow-x: scroll;
@@ -267,6 +268,14 @@ a{
   width: 100%;
 }
 
+.home-main-trade-banner {
+  width: 100%;
+  margin: 20px auto 0 auto;
+}
+.home-main-trade-banner img {
+    width: 100%;
+    object-fit: cover;
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 .home-main-trade-display::-webkit-scrollbar {
   display: none;

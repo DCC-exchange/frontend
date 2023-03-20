@@ -1,13 +1,14 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import {NavLink, Link, Outlet } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./style/home.css";
 // import menu from "../images/menuIcon.svg";
 import merry from "../images/merry dcc.svg";
 import notify from "../images/notify dcc.svg";
+import bannerImg from '../images/banner.png'
 import contact from "../images/conatct dcc.svg";
-import copy from "../images/copy svg.svg";
+
 import mining from "../images/mining dcc.svg";
 import convert from "../images/convert dcc.svg";
 import position from "../images/position dcc.svg";
@@ -111,39 +112,36 @@ export default function Home() {
 
           <div className="home-main-lists-first-flex">
 
-            <div className="home-main-lists-first-flex1">
-              <NavLink to='/login'>
-                <img src={copy} alt="copy" width={"20px"} />
-                <h3>Copy trading</h3>
-              </NavLink>
+            <div className="home-main-lists-first-flex2">
+              <Link to=''>
+                <img src={mining} alt="mining" width={"32px"} />
+                <h3>lite</h3>
+              </Link>
             </div>
 
-            <div className="home-main-lists-first-flex2">
-              <NavLink to='/login'>
-                <img src={mining} alt="mining" width={"20px"} />
-                <h3>Mining</h3>
-              </NavLink>
-            </div>
             <div className="home-main-lists-first-flex3">
-              <NavLink to='/login'>
-                <img src={convert} alt="convert" width={"20px"} />
+              <Link to=''>
+                <img src={convert} alt="convert" width={"32px"} />
                 <h3>Convert</h3>
-              </NavLink>
+              </Link>
             </div>
-            <div className="home-main-lists-first-flex4">
-              <NavLink to='/login'>
-                <img src={position} alt="position" width={"20px"} />
-                <h3>Position</h3>
-              </NavLink>
-            </div>
+            <div className="home-main-lists-first-flex1">
+              <Link to=''>
+                <img src={position} alt="copy" width={"32px"} />
+                <h3>Copy trading</h3>
+              </Link>
+            </div>  
             <div className="home-main-lists-first-flex5">
-              <NavLink to='/login'>
-                <img src={deposit} alt="deposit" width={"25px"} />
+              <Link to=''>
+                <img src={deposit} alt="deposit" width={"32px"} />
                 <h3>Deposit</h3>
-              </NavLink>
+              </Link>
             </div>
           </div>
-
+          
+              <div className='home-main-trade-banner'>
+              <img src={bannerImg} alt='' loading="lazy" />
+              </div>
     
           {/* Home Routes */}
           <div className="home-main-trade-wrapper">

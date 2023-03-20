@@ -1,112 +1,62 @@
-import React from 'react'
-import good from "../images/good dcc.svg";
-
+import React from "react";
+import "./style/hot.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import StarIcon from '@mui/icons-material/Star';
 
 export default function Favourite() {
-  return (
-    <div>
-          <div className="home-main-trade-cover">
-            <div className="home-main-trade-cover-hot">
-            </div>
-            <div className="home-main-trade-cover-favourites">
-              <div className="home-main-trade">
-                <div className="home-main-trade-first-flex">
-                  <h1>
-                    BNB <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>260.1</h2>
-                      <h3 className='positive'>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-                <div className="home-main-trade-first-flex2">
-                  <h1>
-                    BTC <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>22,319.1</h2>
-                      <h3 className='negative'>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="home-main-trade">
-                <div className="home-main-trade-first-flex">
-                  <h1>
-                    ETH <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>1260.1</h2>
-                      <h3>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-                <div className="home-main-trade-first-flex2">
-                  <h1>
-                    SNM <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>1556.1</h2>
-                      <h3>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="home-main-trade">
-                <div className="home-main-trade-first-flex">
-                  <h1>
-                    PHB <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>0.5431</h2>
-                      <h3>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-                <div className="home-main-trade-first-flex2">
-                  <h1>
-                    FIDA <span>/BUSD</span>
-                  </h1>
-                  <div className="home-main-trade-first-inner-flex">
-                    <div className="home-main-trade-first-inner-flex1">
-                      <h2>260.1</h2>
-                      <h3>-3.55%</h3>
-                    </div>
-                    <div className="home-main-trade-first-inner-flex2">
-                      <img src={good} alt="good logo" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  const [Coins, setCoins] = useState("");
 
-          <div className="home-main-trade-first-footer">
-            <div className="home-main-trade-first-footer-btn">
-              <button>Add Favorites</button>
+  useEffect(() => {
+    const interval = setInterval(() => {
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false"
+      )
+      .then((res) => {
+        setCoins(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }, 500);
+    return () => clearInterval(interval);
+  });
+
+  return (
+    <div className="Hot-coins">
+      <div className="hot-coins-container">
+
+        {Coins &&
+          Coins.map((coin) => (
+            <div key={coin.id} className="hot-coin-content">
+              <div className="coin-name1">
+                <p> {coin.name} </p>
+              </div>
+              <div className="coin-name">
+                <p> {coin.current_price} </p>
+                <p>${coin.current_price} </p>
+              </div>
+              <div className="coin-name">
+                {coin.price_change_percentage_24h >= 0 && (
+                  <button className="positive">
+                    +{coin.price_change_percentage_24h.toFixed(2)}%{" "}
+                  </button>
+                )}
+                {coin.price_change_percentage_24h < 0 && (
+                  <button className="negative">
+                    {" "}
+                    {coin.price_change_percentage_24h.toFixed(2)}%{" "}
+                  </button>
+                )}
+              </div>
+              <div className='coin-nams'>
+                        <StarIcon className='h-7 w-7' />
+                    </div>
+
             </div>
-          </div>
+          ))}
+      </div>
     </div>
-  )
+  );
 }

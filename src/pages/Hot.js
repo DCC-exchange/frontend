@@ -2,6 +2,7 @@ import React from "react";
 import "./style/hot.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import StarIcon from '@mui/icons-material/Star';
 
 export default function Hot() {
   const [Coins, setCoins] = useState("");
@@ -25,17 +26,6 @@ export default function Hot() {
   return (
     <div className="Hot-coins">
       <div className="hot-coins-container">
-        <div className="hot-coin-header">
-          <div className="name1">
-            <p>Name</p>
-          </div>
-          <div className="name">
-            <p>Last price</p>
-          </div>
-          <div className="name">
-            <p>24h chg%</p>
-          </div>
-        </div>
 
         {Coins &&
           Coins.map((coin) => (
@@ -60,6 +50,10 @@ export default function Hot() {
                   </button>
                 )}
               </div>
+              <div className=''>
+                        <StarIcon className='h-7 w-7' />
+                    </div>
+
             </div>
           ))}
       </div>

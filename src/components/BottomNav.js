@@ -15,7 +15,7 @@ export default function BottomNav() {
              <NavLink className={(({isActive}) => isActive ? 'bottom-nav-link-active' : '' )} to='index'>
             <HomeIcon />
             </NavLink>   
-            <NavLink className={(({isActive}) => isActive ? 'bottom-nav-link-active' : '' )} to='market'>
+            <NavLink className={(({isActive}) => isActive ? 'bottom-nav-link-active' : '' )} to=''>
             <LeaderBoardIcon/>
             </NavLink>
             <NavLink className={(({isActive}) => isActive ? 'bottom-nav-link-active bottom-nav-spot' : 'bottom-nav-spot' )} to='marketspot'>

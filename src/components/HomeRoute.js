@@ -16,10 +16,10 @@ export default function HomeRoute() {
     <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="gainers">Gainers</NavLink>
     </div>
     <div className="home-main-trade-text">
-    <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="/login">Losers</NavLink>
+    <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="losers">Losers</NavLink>
     </div>
     <div className="home-main-trade-text">
-    <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="/login">Volume</NavLink>
+    <NavLink className={(({isActive}) => isActive ? 'active' : 'normal')} to="volume">24Vol</NavLink>
     </div>
   </div>
     ) 
