@@ -22,8 +22,10 @@ import { AuthContextProvider } from "./context/AuthContext";
 import Hot from "./pages/Hot";
 import Favourite from "./pages/Favourite";
 import Gainers from "./pages/Gainers";
+import Losers from "./pages/Loser";
 import BottomNav from "./components/BottomNav";
 import MarketSpot from "./pages/MarketSpot";
+import Volume from "./pages/Volume";
 
 
 
@@ -63,6 +65,8 @@ function App() {
         <Route path="index" element={<Home />}>
           <Route index element={<Hot />}/>
           <Route path="favourite" element={<Favourite />}/>
+          <Route path="losers" element={<Losers />}/>
+          <Route path="volume" element={<Volume />}/>
           <Route path="gainers" element={<Gainers />}/>
           <Route  path="hot" element={<Hot />}/>
         </Route>

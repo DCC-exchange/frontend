@@ -38,6 +38,9 @@
   font-size: 11.2px;
 }
 
+.coin-name p:first-child, .coin-name1 p {
+  color: white;
+}
 .hot-coin-content .coin-name button {
   color: white;
   border: none;
@@ -56,4 +59,30 @@
 .hot-coin-content .coin-name1 {
   width: 100%;
   padding-left: 10px;
+}
+.coin-nams svg  {
+  color: #F7931A;
+}
+
+
+@media only screen  and (max-width: 600px)  {
+  .home-main-trade-wrapper {
+    margin: 20px -19px 0 -19px;
+    width: 107%;
+  }
+
+  .Hot-coins, .hot-coins-container {
+    background: #160217;
+  }
+
+  .Hot-coins{
+    border-top-right-radius: 30px;
+    padding: 10px 22px 10px 10px;
+  }
+}
+
+@media only screen  and (max-width: 420px)  {
+  .home-main-trade-wrapper {
+    width: 111%;
+  }
 }
