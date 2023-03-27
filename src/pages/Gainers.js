@@ -1,62 +1,70 @@
-import React from 'react'
-import './style/hot.css'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from "react";
+import "./style/hot.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Gainers() {
-    const [ Coins, setCoins ] = useState('')
-    // const [ Gainers, setGainers ] = useState('')
-    
-    useEffect(()=>{
-        axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1000&page=1&sparkline=false')
-        .then(res =>{
-            setCoins(res.data)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-    },[])
+  const [gain, setGains] = useState("");
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+      );
+      setGains(
+        result.data
+          .filter((coin) => coin.price_change_percentage_24h >= 7)
+          .map((coin) => {
+            return {
+              name: coin.name,
+              current_price: coin.current_price,
+              gain: coin.price_change_percentage_24h,
+            };
+          })
+      );
+    };
 
-for(let i = 0; i < Coins.length; i++){
-    if(Coins[i].price_change_percentage_24h > 10){
-    console.log(Coins[i])
+    fetchData();
+  }, []);
+
+  for (let i = 0; i < gain.length; i++) {
+    if (gain[i].price_change_percentage_24h > 10) {
+      console.log(gain[i]);
     }
-}
-
-    // console.log(Math.max(...o))
+  }
 
   return (
-    <div className='Hot-coins'>
-        <div className="hot-coins-container">
-            <div className="hot-coin-header">
-                    <div className="name1">
-                        <p>Name</p>
-                    </div>
-                    <div className="name">
-                        <p>Last price</p>
-                    </div>
-                    <div className="name">
-                        <p>24h chg%</p>
-                    </div>
-            </div>
+    <div className="Hot-coins">
+      <div className="hot-coins-container">
+        <div className="hot-coin-header">
+          <table className="weekly-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Last price</th>
+                <th>24h chg%</th>
+              </tr>
+            </thead>
 
-            { Coins && Coins.map((coin )=> (
-                <div key={coin.id} className="hot-coin-content">
-                    <div className="coin-name1">
-                            <p> {coin.name} </p>
-                     </div>
-                    <div className="coin-name">
-                            <p> {coin.current_price} </p>
-                            <p>${coin.current_price} </p>
-                     </div>
-                     <div className="coin-name">
-                        {coin.price_change_percentage_24h !== null && coin.price_change_percentage_24h >= 0 &&  <button className='positive'>+{coin.price_change_percentage_24h.toFixed(2)}% </button>}
-                        {coin.price_change_percentage_24h !== null && coin.price_change_percentage_24h <  0 &&  <button className='negative'> {coin.price_change_percentage_24h.toFixed(2)}% </button>}
-                    </div>
-                </div>
-            ))}
+            <div className="coin-inner-scroll">
+              {gain &&
+                gain.map((coin) => (
+                  <tbody key={coin.id}>
+                    <tr>
+                      <td>{coin.name}</td>
+                      <td>{coin.current_price}</td>
+                      <td className="coin-name">
+                        <button className="positive">
+                          +{coin.gain.toFixed(4)}%
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
+            </div>
+          </table>
         </div>
+      </div>
     </div>
-  )
+  );
 }
