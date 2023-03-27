@@ -1,8 +1,10 @@
 .login-page{
   position: relative;
+  padding: 6.5px;
 }
 .login-page-inner{
   position: relative;
+  padding: 6.5px;
 }
 .arrow{
   margin: 25px;
@@ -29,6 +31,9 @@
   border-radius: 20px;
   font-size: 11px;
   color: beige;
+}
+.swipe-login-signup{
+  padding: 7px;
 }
 .login-link{
   display: flex;
@@ -59,22 +64,26 @@
   color: beige;
 }
 .login-slide{
-  padding: 5px;
+  padding: 7px;
   margin: 13px;
 }
 .email{
   display: flex;
   align-items: center;
+  padding: 6.5px;
 }
 .email h3{
   font-size: 12px;
   font-weight: 400;
   color: antiquewhite;
+  margin: 0;
+  margin-left: 10px;
 }
 .input-login{
   margin: 9px;
   border: 1px solid #7B1D94;
   border-radius: 20px;
+  padding: 6px;
 }
 .input-login input{
   background-color: transparent;
@@ -86,6 +95,7 @@
   top: 4px;
   color: #878787;
   outline: none;
+  padding: 3px;
 }
 .input-login input::placeholder{
   color: #878787;
@@ -103,7 +113,7 @@
 .login-btn{
   margin: auto;
   width: 70%;
-  height: 26px;
+  height: 36px;
   background: #731A8A;
   border-radius: 20px;
   border: none;

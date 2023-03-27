@@ -6,22 +6,34 @@ import eye from '../images/nwimage/eye.svg'
 const Login = () => {
 
   const [loginSignup, setLoginSignup] = useState(0)
-  const [value, setValue] = useState("");
+  const [valueLogin, setValueLogin] = useState("");
+  const [valueLoginp, setValueLoginp] = useState("");
+  const [username, setUsername] = useState("");
+
+  
 
   function handleLogin(index){
     setLoginSignup(index)
   }
   function handleValue(e) {
-    setValue(e.target.value);
+    setValueLogin(e.target.value);
+  }
+  function handleValuep(e) {
+    setValueLoginp(e.target.value);
+  }
+  function handleUsername(e) {
+    setUsername(e.target.value);
   }
 
   return (
     <div className='login-page'>
       <div className='login-page-inner'>
 
+      <NavLink to='/'>
       <div className='arrow'>
         <img src={Back} alt='arrow'  />
       </div>
+      </NavLink>
       <div className='welcome'>
         <h3>Welcome Back</h3>
       </div>
@@ -58,7 +70,7 @@ const Login = () => {
               <input 
               type='text' 
               name='email' 
-              value={value}
+              value={valueLogin}
               onChange={handleValue}
               placeholder="email" />
             </div>
@@ -71,8 +83,8 @@ const Login = () => {
               <input 
               type='password' 
               name='password' 
-              value={value}
-              onChange={handleValue}
+              value={valueLoginp}
+              onChange={handleValuep}
               placeholder="password" />
               <img src={eye} alt='' width={'10px'} />
             </div>
@@ -110,8 +122,8 @@ const Login = () => {
               <input 
               type='text' 
               name='name' 
-              value={value}
-              onChange={handleValue}
+              value={username}
+              onChange={handleUsername}
               placeholder="username" />
             </div>
 
@@ -123,7 +135,7 @@ const Login = () => {
               <input 
               type='text' 
               name='email' 
-              value={value}
+              value={valueLogin}
               onChange={handleValue}
               placeholder="email" />
             </div>
@@ -136,8 +148,8 @@ const Login = () => {
               <input 
               type='password' 
               name='password' 
-              value={value}
-              onChange={handleValue}
+              value={valueLoginp}
+              onChange={handleValuep}
               placeholder="password" />
               <img src={eye} alt='' width={'10px'} />
             </div>

@@ -1,17 +1,50 @@
 import React, { useState } from 'react'
 import '../pages/style/signup.css'
 import addfoto from '../images/nwimage/addfoto.svg'
-import calender from '../images/nwimage/calender.svg'
 import { NavLink } from 'react-router-dom'
+
+
+const countries = [
+  {value: 'USA', label: 'United State'},
+  {value: 'NIG', label: 'Nigeria'},
+  {value: 'CAN', label: 'Canada'},
+  {value: 'MEX', label: 'Mexico'},
+]
 
 const Signup = () => {
 
-  const [value, setValue] = useState("");
+ 
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [country, setCountry] = useState("");
+  const [dob, setDob] = useState('')
+  const [passportFile, setPassportFile] = useState(null)
+  const [selectedCountry, setSelectedountry] = useState('')
 
 
-  function handleValue(e) {
-    setValue(e.target.value);
+ 
+
+
+  function handleFname(e) {
+    setFname(e.target.value);
   }
+  function handleLname(e) {
+    setLname(e.target.value);
+  }
+  function handleCountry(e) {
+    setCountry(e.target.value);
+  }
+  function handleDOB(e) {
+    setDob(e.target.value);
+  }
+  function handlePassportFileChange(e) {
+    setPassportFile(e.target.files[0])
+  }
+  function countrySelect(e){
+    setSelectedountry(e.target.value)
+  }
+
 
   return (
     <div className='signup-page'>
@@ -19,7 +52,19 @@ const Signup = () => {
         <h3>Create An Account</h3>
       </div>
       <div className='img-add'>
-        <img src={addfoto} alt='foto' />
+
+        <img src={addfoto} alt='foto' className='addfoto'
+        />
+
+        <input
+        type='file'
+        id='passport-file'
+        accept='.pdf,.jpg,.jpeg,.png'
+        onChange={handlePassportFileChange}
+        value={passportFile}
+        >
+        </input>
+
       </div>
 
       <div className='swipe-login-signup'>
@@ -32,9 +77,9 @@ const Signup = () => {
               <input 
               type='text' 
               name='fname' 
-              value={value}
-              onChange={handleValue}
-              placeholder="fname" />
+              value={fname}
+              onChange={handleFname}
+              placeholder=" " />
             </div>
             <div className='email'>
               <h3>Last name</h3>
@@ -44,33 +89,43 @@ const Signup = () => {
               <input 
               type='text' 
               name='lname' 
-              value={value}
-              onChange={handleValue}
-              placeholder="lname" />
+              value={lname}
+              onChange={handleLname}
+              placeholder=" " />
             </div>
             <div className='email'>
               <h3>Country</h3>
             </div>
 
             <div className='input-login'>
-              <input 
-              type='text' 
-              name='country' 
-              value={value}
-              onChange={handleValue}
-              placeholder="Country" />
+              <select
+              value={selectedCountry}
+              onChange={countrySelect}
+              className='country-select'
+              >
+                <option
+                value=''
+                >
+                  
+                </option>
+                {countries.map((country) => (
+                  <option key={country.value} value={country.value}>
+                    {country.label}
+                  </option>
+                ))}
+
+              </select>
+
             </div>
             <div className='email'>
               <h3>Gender</h3>
             </div>
 
             <div className='input-login'>
-              <input 
-              type='text' 
-              name='gender' 
-              value={value}
-              onChange={handleValue}
-              placeholder="gender" />
+              <select className='sel-input-options'>
+                <option value="option1">male</option>
+                <option value="option2">female</option>
+              </select>
             </div>
             <div className='email'>
               <h3>Date Of Birth</h3>
@@ -78,12 +133,11 @@ const Signup = () => {
 
             <div className='input-login img-login'>
               <input 
-              type='text' 
+              type='date' 
               name='date' 
-              value={value}
-              onChange={handleValue}
-              placeholder="dd/mm/yyyy" />
-              <img src={calender} alt='' width={'20px'} />
+              value={dob}
+              onChange={handleDOB}
+              placeholder=" " />
             </div>
 
            <NavLink to='/'>
