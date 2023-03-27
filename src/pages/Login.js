@@ -1,98 +1,179 @@
-import React from "react";
-import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import "./style/login.css";
-import arrow from "../images/arrow back dcc.svg";
-import eye from "../images/eye dcc.svg";
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import Back from '../images/nwimage/backarrow.svg'
+import eye from '../images/nwimage/eye.svg'
 
-import { useLOgin } from "../hooks/useLogin";
-// import { Message } from "emailjs";
+const Login = () => {
 
-export default function Login() {
-  const { login, isLoading, error } = useLOgin();
-  const [email, setemail] = useState("");
-  const [password, setPassword] = useState("");
+  const [loginSignup, setLoginSignup] = useState(0)
+  const [value, setValue] = useState("");
 
-  
-
-  // const History = (e) => {
-  //   e.preventDefault();
-  //   window.history.back();
-  // };
-
-  const HandleSubmit = async(e) => {
-    e.preventDefault();
-    await login(email, password);
-  };
-
-
+  function handleLogin(index){
+    setLoginSignup(index)
+  }
+  function handleValue(e) {
+    setValue(e.target.value);
+  }
 
   return (
-    <div className="login-display">
-      <div className="login-page-display"></div>
-      <div className="login-display-cover">
-        <div className="login-display-inner">
-          <div className="login-display-top">
-            <div className="login-top">
-                 <NavLink to="/">
-                      <img src={arrow} alt="arrow" width={"10px"} />
-                  </NavLink>
-            </div>
-            <h1>Welcome Back</h1>
-          </div>
+    <div className='login-page'>
+      <div className='login-page-inner'>
 
-          <div className="login-top-flex">
-            <div className="login-top-flex1">
-              <NavLink to="/login">
-                <h3>Log in</h3>
-              </NavLink>
-            </div>
-            <div className="login-top-flex2">
-              <NavLink to="/signup">
-                <h3>Sign up Now</h3>
-              </NavLink>
-            </div>
-          </div>
-
-          <form onSubmit={HandleSubmit} >
-            <div className="login-main">
-              <div className="login-main-email">
-                <label>Email</label>
-                <input
-              type="text"
-              placeholder="Email"  onChange={(e) => setemail(e.target.value)} value={email} required />
-              </div>
-              <div className="login-main-password">
-                <label>Password</label>
-                <input
-              type="text"
-              placeholder="password"  onChange={(e) => setPassword(e.target.value)} value={password} required />
-              <div className="login-main-password_img">
-                <img src={eye} alt="eye" width={"20px"} />
-              </div>
-              </div>
-            </div>
-
-            <div className="login-main-btn">
-              {
-                 isLoading &&   <button disabled={isLoading}>Loading...</button>
-              }
-              {
-                 !isLoading &&   <button type="submit" disabled={isLoading}>Login</button>
-              }
-            
-            </div>
-            <div className="forgot_password">
-            <Link to="/forgotpassword">
-              <h3>Forgot password?</h3>
-            </Link>
-          </div>
-          </form>
-          {error && <div className="error-Message">{error}</div>}
-        </div>
-        
+      <div className='arrow'>
+        <img src={Back} alt='arrow'  />
       </div>
-      <div className="login-page-display2"></div>
+      <div className='welcome'>
+        <h3>Welcome Back</h3>
+      </div>
+
+      <div className='login-signup'>
+        <div className='login-link'>
+          <div onClick={() => handleLogin(0)}
+          className={`login ${loginSignup === 0 ? 'active' : ""}`}
+          >
+            Log In
+          </div>
+        </div>
+        <div className='signup-link'>
+          <div
+          onClick={() => handleLogin(1)}
+          className={`login ${loginSignup === 1 ? 'active' : ""}`}
+          >
+          Sign Up Now
+          </div>
+        </div>
+      </div>
+
+      <div className='swipe-login-signup'>
+
+      {
+        loginSignup === 0 && (
+          <>
+          <div className='login-slide'>
+            <div className='email'>
+              <h3>Email</h3>
+            </div>
+
+            <div className='input-login'>
+              <input 
+              type='text' 
+              name='email' 
+              value={value}
+              onChange={handleValue}
+              placeholder="email" />
+            </div>
+
+            <div className='email'>
+              <h3>Password</h3>
+            </div>
+
+            <div className='input-login'>
+              <input 
+              type='password' 
+              name='password' 
+              value={value}
+              onChange={handleValue}
+              placeholder="password" />
+              <img src={eye} alt='' width={'10px'} />
+            </div>
+
+            <div className='forgot-pas'>
+              <h3>Forgot Password?</h3>
+            </div>
+
+            <NavLink to='/'>
+            <div className='login-btn-div'>
+           <button className='login-btn'>Log In</button>
+           </div>
+            </NavLink>
+
+           <div className='login-or'>
+            <h1>OR</h1>
+            <h4>Login with Google</h4>
+           </div>
+
+
+          </div>
+          </>
+        )
+      }
+
+{
+        loginSignup === 1 && (
+          <>
+          <div className='login-slide'>
+            <div className='email'>
+              <h3>Username</h3>
+            </div>
+
+            <div className='input-login'>
+              <input 
+              type='text' 
+              name='name' 
+              value={value}
+              onChange={handleValue}
+              placeholder="username" />
+            </div>
+
+            <div className='email'>
+              <h3>Email</h3>
+            </div>
+
+            <div className='input-login'>
+              <input 
+              type='text' 
+              name='email' 
+              value={value}
+              onChange={handleValue}
+              placeholder="email" />
+            </div>
+
+            <div className='email'>
+              <h3>Password</h3>
+            </div>
+
+            <div className='input-login'>
+              <input 
+              type='password' 
+              name='password' 
+              value={value}
+              onChange={handleValue}
+              placeholder="password" />
+              <img src={eye} alt='' width={'10px'} />
+            </div>
+
+            <div className='forgot-pas'>
+              <h3>Forgot Password?</h3>
+            </div>
+
+           <NavLink to='/verify'>
+           <div className='login-btn-div'>
+           <button className='login-btn'>Continue</button>
+           </div>
+           </NavLink>
+
+           <div className='login-or'>
+            <h1>OR</h1>
+            <h4>Login with Google</h4>
+           </div>
+
+
+          </div>
+          </>
+        )
+      }
+
+      </div>
+
+      
+         
+
+
+
+
+      </div>
     </div>
-  );
+  )
 }
+
+export default Login

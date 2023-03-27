@@ -24,6 +24,7 @@ import Favourite from "./pages/Favourite";
 import Gainers from "./pages/Gainers";
 import BottomNav from "./components/BottomNav";
 import MarketSpot from "./pages/MarketSpot";
+import SignupVerificationPage from "./pages/SignupVerificationPage";
 
 
 
@@ -86,6 +87,8 @@ function App() {
         {/* <Route path="features" element={<Features />}></Route> */}
         <Route path="wallet" element={<Wallet />}></Route>
         <Route path="spot" element={<Spot />} />
+
+        <Route path="verify" element={<SignupVerificationPage />} />
         
 
       </Routes>
