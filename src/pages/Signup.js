@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../pages/style/signup.css'
-import addfoto from '../images/nwimage/addfoto.svg'
-import calender from '../images/nwimage/calender.svg'
+// import addfoto from '../images/nwimage/addfoto.svg'
+// import calender from '../images/nwimage/calender.svg'
 import { NavLink } from 'react-router-dom'
 
 const Signup = () => {
@@ -19,7 +19,7 @@ const Signup = () => {
         <h3>Create An Account</h3>
       </div>
       <div className='img-add'>
-        <img src={addfoto} alt='foto' />
+        {/* <img src={addfoto} alt='foto' /> */}
       </div>
 
       <div className='swipe-login-signup'>
@@ -83,7 +83,7 @@ const Signup = () => {
               value={value}
               onChange={handleValue}
               placeholder="dd/mm/yyyy" />
-              <img src={calender} alt='' width={'20px'} />
+              {/* <img src={calender} alt='' width={'20px'} /> */}
             </div>
 
            <NavLink to='/'>

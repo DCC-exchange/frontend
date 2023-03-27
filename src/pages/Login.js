@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Back from '../images/nwimage/backarrow.svg'
-import eye from '../images/nwimage/eye.svg'
+// import Back from '../images/nwimage/backarrow.svg'
+// import eye from '../images/nwimage/eye.svg'
 
 const Login = () => {
 
@@ -20,7 +20,7 @@ const Login = () => {
       <div className='login-page-inner'>
 
       <div className='arrow'>
-        <img src={Back} alt='arrow'  />
+        {/* <img src={Back} alt='arrow'  /> */}
       </div>
       <div className='welcome'>
         <h3>Welcome Back</h3>
@@ -74,7 +74,7 @@ const Login = () => {
               value={value}
               onChange={handleValue}
               placeholder="password" />
-              <img src={eye} alt='' width={'10px'} />
+              {/* <img src={eye} alt='' width={'10px'} /> */}
             </div>
 
             <div className='forgot-pas'>
@@ -139,7 +139,7 @@ const Login = () => {
               value={value}
               onChange={handleValue}
               placeholder="password" />
-              <img src={eye} alt='' width={'10px'} />
+              {/* <img src={eye} alt='' width={'10px'} /> */}
             </div>
 
             <div className='forgot-pas'>
