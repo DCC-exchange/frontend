@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import '../pages/style/signup.css'
 import addfoto from '../images/nwimage/addfoto.svg'
-import calender from '../images/nwimage/calender.svg'
 import { NavLink } from 'react-router-dom'
 
 
@@ -129,11 +128,10 @@ const Signup = () => {
             <div className='input-login img-login'>
               <input 
               type='date' 
-              name='datee' 
+              name='date' 
               value={dob}
               onChange={handleDOB}
-              placeholder="dd/mm/yyyy" />
-              <img src={calender} alt='' width={'20px'} />
+              placeholder="" />
             </div>
 
            <NavLink to='/'>
