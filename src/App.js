@@ -53,7 +53,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />}></Route>
             {/* routes with the bottom navigation goes in here */}
-            <Route path="index" element={<Home />}>
+            <Route path="home" element={<Home />}>
               <Route index element={<Hot />} />
               <Route path="favourite" element={<Favourite />} />
               <Route path="hot" element={<Hot />} />
