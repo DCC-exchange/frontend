@@ -13,7 +13,7 @@ export default function Welcome() {
 
   // redirects to home if user is already signed in
   if (user || data === "false") {
-    return <Navigate replace to="/index" />;
+    return <Navigate replace to="/home/hot" />;
   }
   // displays preloader once the get started button is clicked
   if (loading) {
