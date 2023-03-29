@@ -38,6 +38,9 @@
     margin: auto;
     margin-top: 15px;
 }
+/* .Navbar-down {
+    display: none;
+} */
 .portfolio-c-list{
     height: 50px;
     display: flex;

@@ -33,6 +33,8 @@ import TotalAssets from "./Wallet/totalAssets/TotalAssets";
 import Spot from "./Wallet/spot/Spot";
 import Futures from "./Wallet/futures/Futures";
 
+
+
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -90,6 +92,7 @@ function App() {
                 <Route path='futures' element={<Futures />} />
             </Route>
 
+         
           </Routes>
         </div>
       </AuthContextProvider>
