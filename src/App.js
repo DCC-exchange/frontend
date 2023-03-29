@@ -28,6 +28,10 @@ import Losers from "./pages/Losers";
 import Volume from "./pages/Volume";
 import TopNav from "./components/TopNav";
 import NavBar from "./components/NavBar";
+import Assets from "./Wallet/overview/Assets";
+import TotalAssets from "./Wallet/totalAssets/TotalAssets";
+import Spot from "./Wallet/spot/Spot";
+import Futures from "./Wallet/futures/Futures";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -63,7 +67,6 @@ function App() {
             </Route>
             {/* routes with the bottom navigation goes in here */}
             <Route path="Otp" element={<Otp />}></Route>
-            <Route path="*" element={<Error />}></Route>
 
             {/* <Route path="features" element={<Features />}></Route> */}
             <Route path="wallet" element={<Wallet />}></Route>
@@ -74,10 +77,19 @@ function App() {
 
             <Route path="forgotPassword" element={<ForgotPassword />}></Route>
             {/* <Route path="features" element={<Features />}></Route> */}
-            <Route path="wallet" element={<Wallet />}></Route>
+            <Route path="wallet" element={<Wallet />}>
+
+            </Route>
             {/* <Route path="spot" element={<Spot />} /> */}
 
             <Route path="verify" element={<SignupVerificationPage />} />
+
+            <Route path='wallett' element={<Assets />}>
+                <Route path='over-view' element={<TotalAssets />} />
+                <Route path='spot' element={<Spot />} />
+                <Route path='futures' element={<Futures />} />
+            </Route>
+
           </Routes>
         </div>
       </AuthContextProvider>
