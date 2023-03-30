@@ -11,7 +11,7 @@ import dolla from '../../images/nwimage/dolla.svg'
 
 const Deposit = ({clear}) => {
 
-  const [cryptoFiat, setCryptoFiat] = useState(false)
+  const [cryptoFiat, setCryptoFiat] = useState(0)
 
   const handleCryptoFiat = (index) => {
     setCryptoFiat(index)

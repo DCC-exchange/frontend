@@ -14,7 +14,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Otp from "./components/Otp";
 // import MarketSpot from "./pages/MarketSpot";
 import Cookies from "./components/Cookies";
-import Error from "./components/Error";
+// import Error from "./components/Error";
 import dccLogo from "./images/dcc logo.svg";
 import { useState, useEffect } from "react";
 import { CookiesProvider } from "react-cookie";
