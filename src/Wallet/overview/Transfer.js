@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../overview/styles/transfer.css'
 import Back from '../../images/nwimage/backarrow.svg'
 import cal from '../../images/nwimage/cal.svg'
 import preset from '../../images/nwimage/presset.png'
 import usdtb from '../../images/nwimage/usdtb.svg'
+import TransferSelect from './TransferSelect'
 
 const Transfer = ({clear}) => {
+
+  const [selectCoin, setSelectCoin] = useState(false)
 
         const handleGoBack = (()=>{
             clear()
         })
+        function handleSelectCoin(e){
+          if(e === 0){
+            setSelectCoin(<TransferSelect clear={clear} />)
+        }
+      }
   return (
     <div className='deposit-main'>
        <div className='deposit-top'>
@@ -34,7 +42,7 @@ const Transfer = ({clear}) => {
         </div>
         <div className='first-box-right'>
           <div className='first-b-spot'>
-            <h3>Spot</h3>
+            <h3 onClick={() => handleSelectCoin(0)}>Spot</h3>
             <img src={preset} alt='' width={'5px'} />
           </div>
           <div className='below-b-spot'>
@@ -64,6 +72,8 @@ const Transfer = ({clear}) => {
       </div>
 
       <div className='mass-btn'>Transfer</div>
+
+      {selectCoin}
     </div>
   )
 }

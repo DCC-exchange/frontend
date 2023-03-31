@@ -5,14 +5,23 @@ import cal from '../../images/nwimage/cal.svg'
 import preset from '../../images/nwimage/presset.png'
 import inch from '../../images/nwimage/inch.svg'
 import eye from '../../images/nwimage/eye.svg'
+import SelectCoin from './SelectCoin'
 
 const Withdraw = ({clear}) => {
 
   const [addressUser, setAddressUser] = useState(0)
+  const [selectCoin, setSelectCoin] = useState(false)
+
 
   const handleAddressUser = (index) => {
     setAddressUser(index)
   }
+  
+  function handleSelectCoin(e){
+    if(e === 0){
+      setSelectCoin(<SelectCoin clear={clear} />)
+  }
+}
 
         const handleGoBack = (()=>{
             clear()
@@ -39,7 +48,7 @@ const Withdraw = ({clear}) => {
               <h2>1INCH</h2>
           </div>
           <div className='img-select-coin'>
-              <h2>Select Coin</h2>
+              <h2 onClick={() => handleSelectCoin(0)}>Select Coin</h2>
               <img src={preset} alt='' width={'4px'} />
           </div>
         </div>
@@ -157,6 +166,8 @@ const Withdraw = ({clear}) => {
                 </div>
         </>
       )}
+
+        {selectCoin}
     </div>
   )
 }

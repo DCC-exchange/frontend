@@ -8,14 +8,22 @@ import cad from '../../images/nwimage/cad.svg'
 import euro from '../../images/nwimage/euro.svg'
 import doll from '../../images/nwimage/doll.svg'
 import dolla from '../../images/nwimage/dolla.svg'
+import SelectCoin from './SelectCoin'
 
 const Deposit = ({clear}) => {
 
   const [cryptoFiat, setCryptoFiat] = useState(0)
+  const [selectCoin, setSelectCoin] = useState(false)
 
   const handleCryptoFiat = (index) => {
     setCryptoFiat(index)
   }
+
+  function handleSelectCoin(e){
+    if(e === 0){
+      setSelectCoin(<SelectCoin clear={clear} />)
+  }
+}
 
     const handleGoBack = (()=>{
         clear()
@@ -43,7 +51,7 @@ const Deposit = ({clear}) => {
               <h2>USDT</h2>
           </div>
           <div className='img-select-coin'>
-              <h2>Select Coin</h2>
+              <h2 onClick={() => handleSelectCoin(0)}>Select Coin</h2>
               <img src={preset} alt='' width={'4px'} />
           </div>
         </div>
@@ -143,7 +151,7 @@ const Deposit = ({clear}) => {
           
           </>
         )}
-
+        {selectCoin}
 
     </div>
   )
