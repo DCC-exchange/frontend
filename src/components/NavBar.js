@@ -18,26 +18,26 @@ export default function NavBar() {
               <h3>Home</h3>
           </div>
         </NavLink>
-        <NavLink to="/market">
+        <NavLink to="">
         <div className="NavBar-display-main-flex1">
           <img src={market} alt="copy logo"  />
           <h3>Market</h3>
         </div>
         </NavLink>
-        <NavLink to="/features">
+        <NavLink to="">
         <div className="NavBar-display-main-flex3">
           <img src={futures} alt="copy logo" />
         </div>
         </NavLink>
 
-        <NavLink to="/Spot">
+        <NavLink to="">
         <div className="NavBar-display-main-flex1">
           <img src={spot} alt="copy logo"  />
           <h3>Spot</h3>
         </div>
         </NavLink>
 
-        <NavLink to="/login">
+        <NavLink to="/wallett">
         <div className="NavBar-display-main-flex1">
           <img src={wallet} alt="copy logo" />
           <h3>Wallet</h3>

@@ -1,0 +1,249 @@
+@media only screen and (max-width: 676px) {
+    .deposit-main{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(196.08deg, #86228E 0.63%, #240426 76.25%);
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding: 0;
+    }
+    .deposit-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 18px;
+        width: 84%;
+    }
+    .crypto-fiat{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+    }
+    .crypto-fiat h2{
+        font-size: 12px;
+        margin: 0;
+        margin-left: -16px;
+        color: #878787;
+    }
+    .crypto-fiat h3{
+        font-size: 12px;
+        margin: 0;
+        margin-left: 16px;
+        color: #878787;
+    }
+    .line-div{
+        width: 100%;
+        border-bottom: 1px solid  #59336F;;
+    }
+    .deposit-sec{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 86%;
+        margin: auto;
+    }
+    .img-usdt{
+        display: flex;
+        align-items: center;
+    }
+    .img-usdt h2{
+        font-size: 12px;
+        color: #878787;
+        margin: 7px;
+    }
+    .img-select-coin{
+        display: flex;
+        align-items: center;
+    }
+    .img-select-coin h2{
+        font-size: 11px;
+        color: #878787;
+        margin: 7px;
+    }
+    .network-{
+        font-size: 16px;
+        color: aliceblue;
+        padding: 7px;
+        padding-left: 33px;
+    }
+    .btn-div-sel{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: -25px;
+        margin-top: 20px;
+    }
+    .btn-div-sel div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 43px;
+        margin-left: 20px;
+        font-size: 12px;
+        color: aliceblue;
+        background-color:   rgba(104, 66, 125, 0.5);
+        border-radius: 8px;
+    }
+    .p-cl-div{
+        margin: auto;
+        margin-top: 160px;
+        width: 90%;
+    }
+    .p-cl-div p{
+        margin: 10px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .deposit-below-div{
+        width: 92%;
+        height: 46px;
+        margin: auto;
+        margin-top: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.4);;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .deposit-left{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-left: -20px;
+    }
+    .deposit-left h4{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .deposit-left h2{
+        margin: 4px;
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .deposit-right{
+        margin: 0;
+        margin-left: 100px;
+    }
+    .deposit-right img{
+        margin: 4px;
+    }
+    
+    /* deposit fiat */
+    
+    .receivee{
+        padding: 15px;
+        margin: 0;
+        margin-left: 21px;
+        color: aliceblue;
+    }
+    .receive-below{
+        width: 309px;
+        height: 40px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(104, 66, 125, 0.5);
+        border-radius: 5px;
+    }
+    .receive-below .receive-right{
+        display: flex;
+        align-items: center;
+        margin-left: 120px;
+    }
+    .amount{
+        font-size: 11px;
+        color: #878787;
+    }
+    .receive-right h3{
+        font-size: 12px;
+        color: #FFFFFF;
+        margin: 9px;
+    }
+    .spend-{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .spend- .spennd{
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+    .spend- .reff{
+        color: #878787;
+        font-size: 12px;
+        margin-left: 60px;
+    }
+    .border{
+        margin: auto;
+        margin-top: 50px;
+        width: 80%;
+        border-bottom: 1px solid #59336F;
+    }
+    .transak{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 88%;
+        margin: auto;
+        border: 1px solid #F316DD;
+        border-radius: 5px;
+        height: 45px;
+        margin-top: 17px;
+    }
+    .transak- h2{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .transak- h5{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+    }
+    .transak--{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    
+    .transakk{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 88%;
+        margin: auto;
+        background: rgba(104, 66, 125, 0.5);
+        border-radius: 5px;
+        height: 45px;
+        margin-top: 17px;
+    }
+    .transakk- h2{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .transakk- h5{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 10px;
+    }
+    .transakk--{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .order-button{
+        width: 300px;
+        background: linear-gradient(90deg, #E891FF 0%, #B14BCC 68.75%);
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 50px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+

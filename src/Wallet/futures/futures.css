@@ -1,0 +1,117 @@
+@media only screen and (max-width: 676px) {
+    .futures-rec{
+        background: linear-gradient(180deg, rgba(199, 0, 248, 0.189) 0%, rgba(34, 5, 41, 0.3) 100%);
+        border-radius: 20px;
+        width: 88%;
+        height: 200px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .futures-rec-first{
+        margin: 0;
+        padding: 0;
+        padding-top: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #f0efef;
+        font-size: 11px;
+    }
+    .futures-rec-first div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 76px;
+        height: 30px;
+        border-radius: 4px;
+    }
+    .futures-rec-first .usd-m{
+        background-color: #292626;
+    }
+    .futures-secnd{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .ineer{
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        margin-right: 33px;
+    }
+    .ineer img{
+        position: absolute;
+        margin: 0;
+        margin-left: 133px;
+    }
+    .ineer h2{
+        font-size: 11px;
+        color: #878787;
+    }
+    .transfer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #dad5d5;
+        font-size: 12px;
+        width: 76px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: #292626;
+    }
+    .furures-last{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #464444;
+        width: 88%;
+        margin: auto;
+    }
+    .futures-right{
+        flex: 1;
+    }
+    .futures-right h1{
+        font-size: 10px;
+        color: #878787;
+    }
+    .futures-right h2{
+        font-size: 15px;
+        color: #fff;
+    }
+    .futures-right h3{
+        font-size: 8px;
+        color: #878787;
+    }
+    .left-left{
+        margin: 0;
+        margin-left: 15px;
+        border-left: 1px solid #464444;
+        padding: 0;
+        padding-left: 7px;
+    }
+    .img-middle-{
+        width: 94%;
+        margin: auto;
+        margin-top: 35px;
+    }
+    .img-middle- img{
+        width: 328px;
+        margin: 0;
+        margin-left: -10px;
+    }
+    .options-{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 15px;
+        font-size: 11px;
+        color: #fff;
+        border-bottom: .1px solid #878787;
+    }
+    .options- .options--{
+        border-bottom: 2px solid #292525;
+    }
+}
+
